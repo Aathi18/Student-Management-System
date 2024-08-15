@@ -20,15 +20,15 @@
 /* Sidebar links */
 .sidebar a {
   display: block;
-  color: black;
+  color: brown;
   padding: 16px;
   text-decoration: none;
 }
 
 /* Active/current link */
 .sidebar a.active {
-  background-color: #04AA6D;
-  color: white;
+  background-color: orange;
+  color: black;
 }
 
 /* Links on mouse-over */
