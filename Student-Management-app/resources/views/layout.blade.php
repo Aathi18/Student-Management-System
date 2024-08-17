@@ -67,7 +67,7 @@ div.content {
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-15">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <a class="navbar-brand" href="#"><h2>Student Management System<h2></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -91,11 +91,9 @@ div.content {
 
                     </div>
             </div>
-            <div class="cold-md-9">
-                    <div class="content">
-                        @yield('content')
-
-                    </div>
+            <div class="col-md-9">
+                 
+                        @yield('content')   
             </div>
         </div>
     </div>

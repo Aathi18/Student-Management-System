@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Student;
-use Illuminate\Http\RedirctResponse;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 use Illuminate\View\View;
 
@@ -16,7 +16,8 @@ class StudentController extends Controller
      */
     public function index(): View
     {
-        //
+        $students = Student::all();
+        return view('students.index')->with('students',$students);
     }
 
     /**
