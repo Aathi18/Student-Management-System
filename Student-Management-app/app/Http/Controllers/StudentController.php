@@ -23,17 +23,21 @@ class StudentController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create():View
     {
         //
+        return view('students.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request):RedirectResponse
     {
         //
+        $input = $request->all();
+        Student::create($input);
+        return redirect('students')->with('flash_message','Student Added!');
     }
 
     /**
