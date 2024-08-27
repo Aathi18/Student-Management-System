@@ -7,6 +7,7 @@ use App\Models\Course;
 use Illuminate\View\View;
 
 
+
 class CourseController extends Controller
 {
     /**
