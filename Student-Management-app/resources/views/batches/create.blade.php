@@ -9,9 +9,9 @@
             <label for="#">Batch Name</label><br>
             <input type="text" name="name" id="name" class="form-control"><br>
             <label for="#">Course Name</label><br>
-            <input type="text" name="syllabus" id="course_id" class="form-control"><br>
-            <label for="#">Start Dtae</label><br>
-            <input type="text" name="duration" id="start_date" class="form-control"><br>
+            <input type="text" name="course_id" id="course_id" class="form-control"><br>
+            <label for="#">Start Date</label><br>
+            <input type="text" name="start_date" id="start_date" class="form-control"><br>
             <input type="submit" value="save"  class="btn btn-success"><br>
 
         </form>
