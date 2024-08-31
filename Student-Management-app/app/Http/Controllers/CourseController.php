@@ -13,7 +13,7 @@ class CourseController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index():View
     {
         //
         $courses = Course::all();
@@ -23,7 +23,7 @@ class CourseController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create():View
     {
         //
         return view('courses.create');
@@ -33,7 +33,7 @@ class CourseController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request):RedirectResponse
     {
         //
         $input = $request->all();
@@ -44,7 +44,7 @@ class CourseController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $id):View
     {
         //
         $courses = Course::find($id);
@@ -54,7 +54,7 @@ class CourseController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(string $id):View
     {
         //
         $courses = Course::find($id);
@@ -64,7 +64,7 @@ class CourseController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $id):RedirectResponse
     {
         //
         $courses = Course::find($id);
@@ -76,7 +76,7 @@ class CourseController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(string $id):RedirectResponse
     {
         //
         Course::destroy($id);
