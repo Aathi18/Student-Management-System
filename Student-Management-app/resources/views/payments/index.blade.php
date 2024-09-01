@@ -39,6 +39,7 @@
                                             <button type="submit" class="btn btn-danger btn-sm"  title="Delete Payment" onclick="return confirm(&quot;Confirm delete?&quot;)"><li class="fa fa-trash-o " aria-hidden="true" ></li>Delete</button>
                                             
                                         </form>
+                                        <a href="{{url('/report/report1/'.$item->id)}}" title="Edit Payment"><button class="btn btn-success"><i class="fa fa-print" aria-hidden="true"></i>Print</button></a>
                                     </td>
                                 </tr>
                                @endforeach 

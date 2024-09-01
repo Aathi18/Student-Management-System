@@ -9,9 +9,22 @@
             <label for="#">Enroll No</label><br>
             <input type="text" name="enroll_no" id="enroll_no" class="form-control"><br>
             <label for="#">Batch</label><br>
-            <input type="text" name="batch_id" id="batch_id" class="form-control"><br>
+    
+            
+            <select name="batch_id" id="batch_id" class="form-control">
+            @foreach($batches as $id => $name)
+            <option value="{{$id}}">{{$name}}</option>
+            @endforeach
+            </select>
+
             <label for="#">Student</label><br>
-            <input type="text" name="student_id" id="student_id" class="form-control"><br>
+            
+            <select name="student_id" id="student_id" class="form-control">
+            @foreach($students as $id => $name)
+            <option value="{{$id}}">{{$name}}</option>
+            @endforeach
+            </select>
+
             <label for="#">Join Date</label><br>
             <input type="text" name="join_date" id="join_date" class="form-control"><br>
             <label for="#">Fee</label><br>
