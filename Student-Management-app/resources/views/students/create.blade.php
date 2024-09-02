@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="card shadow-sm border-0">
-    <div class="card-header bg-primary text-white">
+    <div class="card-header bg-info text-white text-center">
         <h4 class="mb-0">Student Page</h4>
     </div>
     <div class="card-body">
@@ -38,6 +38,13 @@
     .card {
         border-radius: 10px;
         margin-top: 20px;
+    }
+    .card-header {
+        background-color: #007bff;
+        border-bottom: 2px solid #0056b3;
+        text-align: center;
+        font-size: 1.25rem;
+        font-family: 'Georgia', serif;
     }
     .form-control {
         border-radius: 5px;

@@ -65,7 +65,6 @@
         border-bottom: 2px solid #0056b3;
         font-family: 'Roboto', sans-serif;
         font-size: 1.5rem;
-        text-align: center;
     }
     .card-body {
         padding: 20px;
@@ -82,12 +81,12 @@
     }
     .btn-light {
         background-color: #f8f9fa;
-        border-color: #dae0e5;
-        color: #343a40;
+        color: #007bff;
+        border: 1px solid #007bff;
     }
     .btn-light:hover {
         background-color: #e2e6ea;
-        border-color: #d3d9db;
+        color: #0056b3;
     }
     .btn-success {
         background-color: #28a745;

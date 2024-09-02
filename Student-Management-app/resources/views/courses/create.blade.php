@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="card shadow-sm border-0">
-    <div class="card-header bg-primary text-white">
+    <div class="card-header bg-info text-white text-center">
         <h2 class="mb-0">Course Page</h2>
     </div>
     <div class="card-body">
@@ -20,7 +20,7 @@
                 <label for="duration" class="form-label">Duration</label>
                 <input type="text" name="duration" id="duration" class="form-control">
             </div>
-            <input type="submit" value="Save" class="btn btn-success">
+            <input type="submit" value="Save" class="btn btn-success btn-block">
         </form>
     </div>
 </div>
@@ -38,9 +38,9 @@
     .card-header {
         background-color: #007bff;
         border-bottom: 2px solid #0056b3;
-        font-family: 'Roboto', sans-serif;
-        font-size: 1.5rem;
         text-align: center;
+        font-size: 1.25rem;
+        font-family: 'Georgia', serif;
     }
     .card-body {
         padding: 20px;

@@ -6,9 +6,13 @@
         <h2 class="mb-0">Course Details</h2>
     </div>
     <div class="card-body">
-        <h5 class="card-title text-primary">Name: {{$courses->name}}</h5>
-        <p class="card-text"><strong>Syllabus:</strong> {{$courses->syllabus}}</p>
-        <p class="card-text"><strong>Duration:</strong> {{$courses->duration()}}</p>
+        <h5 class="card-title text-primary" style="font-family: 'Roboto', sans-serif;">
+            Name:<span class="text-dark"> {{$courses->name}}</span>
+            </h5>
+        <p class="card-text" style="font-family: 'Lora', serif;"><strong>Syllabus:</strong><span class="text-muted"> {{$courses->syllabus}}</span>
+        </p>
+        <p class="card-text"style="font-family: 'Open Sans', sans-serif;"><strong>Duration:</strong> <span class="text-success"> {{$courses->duration()}}</span>
+        </p>
     </div>
 </div>
 @endsection
@@ -21,13 +25,17 @@
         border-radius: 12px;
         margin-top: 20px;
         background-color: #ffffff;
+        transition: transform 0.3s ease-in-out;
+    }
+    .card:hover {
+        transform: scale(1.02);
     }
     .card-header {
-        background-color: #17a2b8; /* Teal color */
-        border-bottom: 2px solid #117a8b; /* Darker teal color */
-        color: #ffffff;
+        background-color: #007bff;
+        border-bottom: 2px solid #0056b3;
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
+        font-family: 'Georgia', serif;
     }
     .card-body {
         padding: 20px;
@@ -35,13 +43,16 @@
     .card-title {
         font-size: 1.5rem;
         margin-bottom: 10px;
-        color: #007bff; /* Blue color */
+        color: #0056b3;
     }
     .card-text {
         font-size: 1rem;
-        color: #555555; /* Dark grey color */
+        color: #333;
     }
-    .card-text strong {
-        color: #333333; /* Slightly darker grey for labels */
+    .text-muted {
+        color: #6c757d !important;
+    }
+    .text-success {
+        color: #28a745 !important;
     }
 </style>

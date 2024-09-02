@@ -1,4 +1,3 @@
-
 @extends('layout')
 @section('content')
 
@@ -56,9 +55,9 @@
     }
 </style>
 
-<div class="card">
+<div class="card shadow-sm border-0">
     <div class="card-header bg-info text-white text-center">Edit Page</div>
-    <div class="card-body ">
+    <div class="card-body">
         <form action="{{ url('batches/' . $batches->id) }}" method="post">
             {!! csrf_field() !!}
             @method("PATCH")

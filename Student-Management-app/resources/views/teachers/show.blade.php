@@ -4,7 +4,7 @@
     <div class="card-header bg-info text-white text-center">
         <h3 class="mb-0">Teacher Details</h3>
     </div>
-    <div class="card-body">
+    
         <div class="card-body">
             <h5 class="card-title text-primary" style="font-family: 'Roboto', sans-serif;">
                 Name: <span class="text-dark">{{ $teachers->name }}</span>
@@ -17,7 +17,7 @@
             </p>
         </div>
     </div>
-</div>
+
 
 <style>
     body {
