@@ -79,6 +79,11 @@
         background-color: #343a40;
         color: #ffffff;
     }
+    .table th {
+        background-color: #007bff;
+        color: white;
+        font-family: 'Georgia', serif;
+    }
     .btn-light {
         background-color: #f8f9fa;
         color: #007bff;

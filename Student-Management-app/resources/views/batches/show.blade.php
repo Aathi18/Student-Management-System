@@ -6,17 +6,18 @@
     </div>
     
     <div class="card-body">
-            <h5 class="card-title text-primary" style="font-family: 'Roboto', sans-serif;">
+            <h5 class="card-title text-primary" style="font-family: 'Lora', serif;">
                 Name:<span class="text-dark"> {{$batches->name}}</span>
 
                 </h5>
             <p class="cart-text" style="font-family: 'Lora', serif;">
             <strong>Course:</strong> <span class="text-muted">{{$batches->course->name}}</span>
             </p>
-            <p class="cart-text" style="font-family: 'Open Sans', sans-serif;">
-            <strong>Start Date: </strong> <span class="text-success">{{$batches->start_date}}</span>
+            <p class="cart-text" style="font-family: 'Lora', serif;">
+            <strong>Start Date: </strong> <span>{{$batches->start_date}}</span>
             </p>
 </div>
+<hr />
 </div>
 @endsection
 
@@ -53,10 +54,10 @@
         font-size: 1rem;
         color: #333;
     }
-    .text-muted {
-        color: #6c757d !important;
-    }
-    .text-success {
-        color: #28a745 !important;
+    hr {
+        border: 0;
+        height: 1px;
+        background: #ccc;
+        margin-top: 20px;
     }
 </style>

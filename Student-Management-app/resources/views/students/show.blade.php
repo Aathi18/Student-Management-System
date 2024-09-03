@@ -6,17 +6,18 @@
     </div>
     <div class="card-body">
         <div class="card-body">
-            <h5 class="card-title text-primary font-weight-bold" style="font-family: 'Roboto', sans-serif;">
+            <h5 class="card-title text-primary font-weight-bold" style="font-family: 'Lora', serif;">
                 <i class="fa fa-user"></i> Name: <span class="text-dark">{{$students->name}}</span>
             </h5>
             <p class="card-text" style="font-family: 'Lora', serif;">
-                <i class="fa fa-map-marker"></i> <strong>Address:</strong> <span class="text-muted">{{$students->address}}</span>
+                <i class="fa fa-map-marker"></i> <strong>Address:</strong> <span>{{$students->address}}</span>
             </p>
-            <p class="card-text" style="font-family: 'Open Sans', sans-serif;">
-                <i class="fa fa-phone"></i> <strong>Mobile:</strong> <span class="text-success">{{$students->mobile}}</span>
+            <p class="card-text" style="font-family: 'Lora', serif;">
+                <i class="fa fa-phone"></i> <strong>Mobile:</strong> <span >{{$students->mobile}}</span>
             </p>
         </div>
     </div>
+    <hr />
 </div>
 
 <style>
@@ -52,11 +53,12 @@
         font-size: 1rem;
         color: #333;
     }
-    .text-muted {
-        color: #6c757d !important;
+    hr {
+        border: 0;
+        height: 1px;
+        background: #ccc;
+        margin-top: 20px;
     }
-    .text-success {
-        color: #28a745 !important;
-    }
+    
 </style>
 @endsection

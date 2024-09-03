@@ -87,6 +87,11 @@
         vertical-align: middle;
         text-align: center;
     }
+    .table th {
+        background-color: #007bff;
+        color: white;
+        font-family: 'Georgia', serif;
+    }
     .btn-info {
         background-color: #17a2b8;
         border-color: #117a8b;

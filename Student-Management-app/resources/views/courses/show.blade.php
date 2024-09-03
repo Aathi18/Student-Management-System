@@ -6,14 +6,15 @@
         <h2 class="mb-0">Course Details</h2>
     </div>
     <div class="card-body">
-        <h5 class="card-title text-primary" style="font-family: 'Roboto', sans-serif;">
+        <h5 class="card-title text-primary" style="font-family: 'Lora', serif;"">
             Name:<span class="text-dark"> {{$courses->name}}</span>
             </h5>
-        <p class="card-text" style="font-family: 'Lora', serif;"><strong>Syllabus:</strong><span class="text-muted"> {{$courses->syllabus}}</span>
+        <p class="card-text" style="font-family: 'Lora', serif;"><strong>Syllabus:</strong><span > {{$courses->syllabus}}</span>
         </p>
-        <p class="card-text"style="font-family: 'Open Sans', sans-serif;"><strong>Duration:</strong> <span class="text-success"> {{$courses->duration()}}</span>
+        <p class="card-text"style="font-family: 'Lora', serif;"><strong>Duration:</strong> <span > {{$courses->duration()}}</span>
         </p>
     </div>
+<hr />
 </div>
 @endsection
 <style>
@@ -49,10 +50,10 @@
         font-size: 1rem;
         color: #333;
     }
-    .text-muted {
-        color: #6c757d !important;
-    }
-    .text-success {
-        color: #28a745 !important;
+    hr {
+        border: 0;
+        height: 1px;
+        background: #ccc;
+        margin-top: 20px;
     }
 </style>
