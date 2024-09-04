@@ -42,6 +42,7 @@ class BatchController extends Controller
     {
         //
         $input = $request->all();
+        // dd($input);
         Batch::create($input);
         return redirect('batches')->with('flash_message','Batch Added!');
     }
@@ -71,9 +72,10 @@ class BatchController extends Controller
      */
     public function update(Request $request, string $id):RedirectResponse
     {
-        //
+        // dd($request->all());
         $batches = Batch::find($id);
         $input = $request->all();
+        
         $batches ->update($input);
         return redirect('batches')->with('flash_message','Batch Updated');
     }

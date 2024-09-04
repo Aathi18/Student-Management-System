@@ -56,7 +56,7 @@
 </style>
 
 <div class="card shadow-sm border-0">
-    <div class="card-header bg-info text-white text-center">Edit Page</div>
+    <div class="card-header bg-info text-white text-center">Edit Batch</div>
     <div class="card-body">
         <form action="{{ url('batches/' . $batches->id) }}" method="post">
             {!! csrf_field() !!}
@@ -65,7 +65,8 @@
             <label for="name">Name</label><br>
             <input type="text" name="name" id="name" value="{{ $batches->name }}" class="form-control"><br>
             <label for="course_id">Course</label><br>
-            <input type="text" name="course_id" id="course_id" value="{{ $batches->course->name }}" class="form-control"><br>
+            <input type="text" name="course_name" id="course_name" value="{{ $batches->course->name }}" class="form-control" disabled readonly><br>
+            
             <label for="start_date">Start Date</label><br>
             <input type="text" name="start_date" id="start_date" value="{{ $batches->start_date }}" class="form-control"><br>
             <input type="submit" value="Update" class="btn btn-primary btn-block"><br>

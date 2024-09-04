@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Management System</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
+ 
+</head>
+<style>
         /* Full-page background color */
         body {
-            background-color: #f8f9fa;  /* Light gray background color */
+            /* background-color: #f8f9fa;  Light gray background color */
+            background-image: url('3.jpg');
+            background-attachment: fixed;
+
+            
         }
 
         /* Sidebar background color */
@@ -125,14 +131,20 @@
             transform: scale(1.05);
             opacity: 0.9;
         }
+        .navbar h2 {
+    color: #FFFFFF; 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
     </style>
-</head>
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-9">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="#"><h2>Teacher Management System<h2></a>
+            <div class="col-md-12">
+                <nav class="navbar navbar-expand-lg navbar-light justify-content-center  ">
+                    <a class="navbar-brand" href="#"><h2>Student Management System<h2></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -140,10 +152,10 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row " >
             <div class="col-md-3">
                 <!-- The sidebar -->
-                <div class="sidebar">
+                <div class="sidebar ">
                     <a class="active" href="#home">Home</a>
                     <a href="{{ url('/students') }}">Student</a>
                     <a href="{{ url('/teachers') }}">Teacher</a>
@@ -160,3 +172,4 @@
     </div>
 </body>
 </html>
+
