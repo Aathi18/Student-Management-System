@@ -9,12 +9,12 @@
             
             <div class="form-group">
                 <label for="name">Batch Name</label>
-                <input type="text" name="name" id="name" class="form-control">
+                <input type="text" name="name" id="name" class="form-control" placeholder="Enter the Batch Name" style="font-family: 'Lora', serif;">
             </div>
             
             <div class="form-group">
                 <label for="course_id">Course Name</label>
-                <select name="course_id" id="course_id" class="form-control">
+                <select name="course_id" id="course_id" class="form-control" style="font-family: 'Lora', serif;">
                     @foreach($courses as $id => $name)
                         <option value="{{ $id }}">{{ $name }}</option>
                     @endforeach
@@ -23,7 +23,7 @@
 
             <div class="form-group">
                 <label for="start_date">Start Date</label>
-                <input type="text" name="start_date" id="start_date" class="form-control">
+                <input type="text" name="start_date" id="start_date" class="form-control" placeholder="Enter the Start date" style="font-family: 'Lora', serif;">
             </div>
             
             <input type="submit" value="Save" class="btn btn-success">

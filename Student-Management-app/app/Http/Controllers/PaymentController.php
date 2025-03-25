@@ -39,9 +39,19 @@ class PaymentController extends Controller
     public function store(Request $request):RedirectResponse
     {
         //
-        $input = $request->all();
-        Payment::create($input);
-        return redirect('payments')->with('flash_message','Payment Added!');
+        $request->validate([
+            'enrollment_id' => 'required|exists:enrollments,id',
+            'paid_date' => 'required|date_format:Y-m-d',
+            'amount' => 'required|numeric|min:1',
+        ]);
+        Payment::create([
+            'enrollment_id' => $request->input('enrollment_id'),
+            'paid_date' => $request->input('paid_date'),
+            'amount' => $request->input('amount'),
+        ]);
+    
+       
+        return redirect()->route('payments.index')->with('flash_message','Payment Added!');
        
 
     }

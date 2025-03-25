@@ -10,15 +10,15 @@
             {!! csrf_field() !!}
             <div class="form-group">
                 <label for="name" class="font-weight-bold" style="font-family: 'Roboto', sans-serif;">Name</label><br>
-                <input type="text" name="name" id="name" class="form-control" style="font-family: 'Roboto', sans-serif;"><br>
+                <input type="text" name="name" id="name" class="form-control" style="font-family: 'Roboto', serif;" placeholder="Enter the Name"><br>
             </div>
             <div class="form-group">
                 <label for="address" class="font-weight-bold" style="font-family: 'Lora', serif;">Address</label><br>
-                <input type="text" name="address" id="address" class="form-control" style="font-family: 'Lora', serif;"><br>
+                <input type="text" name="address" id="address" class="form-control" style="font-family: 'Lora', serif;" placeholder="Enter the Address"><br>
             </div>
             <div class="form-group">
                 <label for="mobile" class="font-weight-bold" style="font-family: 'Open Sans', sans-serif;">Mobile</label><br>
-                <input type="text" name="mobile" id="mobile" class="form-control" style="font-family: 'Open Sans', sans-serif;"><br>
+                <input type="text" name="mobile" id="mobile" class="form-control" style="font-family: 'Open Sans', serif;" placeholder="Enter the  Mobile Number"><br>
             </div>
             <input type="submit" value="Save" class="btn btn-success btn-block"><br>
         </form>

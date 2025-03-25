@@ -60,17 +60,17 @@
         <form action="{{url('payments')}}" method="post">
             {!! csrf_field() !!}
             <label for="enrollment_id">Enrollment No</label><br>
-            <select name="enrollment_id" id="enrollment_id" class="form-control">
+            <select name="enrollment_id" id="enrollment_id" class="form-control" style="font-family: 'Lora', serif;">
                 @foreach($enrollments as $id => $enroll_no )
                     <option value="{{ $id }}">{{ $enroll_no }} </option>
                 @endforeach
             </select>
 
             <label for="paid_date">Paid Date</label><br>
-            <input type="text" name="paid_date" id="paid_date" class="form-control"><br>
+            <input type="text" name="paid_date" id="paid_date" class="form-control" style="font-family: 'Lora', serif;" placeholder="Enter Paid Date"><br>
 
             <label for="amount">Amount</label><br>
-            <input type="text" name="amount" id="amount" class="form-control"><br>
+            <input type="text" name="amount" id="amount" class="form-control" style="font-family: 'Lora', serif;" placeholder="Enter Amount"><br>
 
             <input type="submit" value="Save" class="btn btn-success"><br>
         </form>

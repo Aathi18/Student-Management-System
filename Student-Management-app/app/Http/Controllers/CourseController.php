@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Course;
 use Illuminate\View\View;
-
+use Illuminate\Http\RedirectResponse;
 
 
 class CourseController extends Controller
@@ -36,6 +36,10 @@ class CourseController extends Controller
     public function store(Request $request):RedirectResponse
     {
         //
+        $request->validate([
+            'name' => 'required|unique:courses,name',
+            'code' => 'required|unique:courses,code',
+        ]);
         $input = $request->all();
         Course::create($input);
         return redirect('courses')->with('flash_message','Course Added!');
