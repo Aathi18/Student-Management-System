@@ -34,7 +34,10 @@
 
 <style>
     body {
-        background-color: #e9ecef;
+        background-image: url("{{ asset('2.jpg') }}");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
     }
     .card {
         border-radius: 10px;

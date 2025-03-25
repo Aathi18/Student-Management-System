@@ -33,7 +33,9 @@
 
 <style>
     body {
-        background-color: #f8f9fa;
+        
+        background-image: url('3.jpg');
+        background-attachment: fixed;
     }
     .card {
         border-radius: 10px;

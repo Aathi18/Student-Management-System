@@ -1,30 +1,12 @@
 @extends('layout')
 @section('content')
-<div class="card shadow-sm border-0">
-    <div class="card-header bg-info text-white text-center">
-        <h2 class="mb-0">Batch Details</h2>
-    </div>
-    
-    <div class="card-body">
-            <h5 class="card-title text-primary" style="font-family: 'Lora', serif;">
-                Name:<span class="text-dark"> {{$batches->name}}</span>
-
-                </h5>
-            <p class="cart-text" style="font-family: 'Lora', serif;">
-            <strong>Course:</strong> <span class="text-muted">{{$batches->course->name}}</span>
-            </p>
-            <p class="cart-text" style="font-family: 'Lora', serif;">
-            <strong>Start Date: </strong> <span>{{$batches->start_date}}</span>
-            </p>
-</div>
-<hr />
-</div>
-@endsection
 
 <style>
     body {
-        background-color: #f0f2f5;
-        font-family: 'Arial', sans-serif;
+        background-image: url("{{ asset('2.jpg') }}");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
     }
     .card {
         border-radius: 12px;
@@ -61,3 +43,25 @@
         margin-top: 20px;
     }
 </style>
+
+<div class="card shadow-sm border-0">
+    <div class="card-header bg-info text-white text-center">
+        <h2 class="mb-0">Batch Details</h2>
+    </div>
+    
+    <div class="card-body">
+            <h5 class="card-title text-primary" style="font-family: 'Lora', serif;">
+                Name:<span class="text-dark"> {{$batches->name}}</span>
+
+                </h5>
+            <p class="cart-text" style="font-family: 'Lora', serif;">
+            <strong>Course:</strong> <span class="text-muted">{{$batches->course->name}}</span>
+            </p>
+            <p class="cart-text" style="font-family: 'Lora', serif;">
+            <strong>Start Date: </strong> <span>{{$batches->start_date}}</span>
+            </p>
+</div>
+<hr />
+</div>
+@endsection
+
