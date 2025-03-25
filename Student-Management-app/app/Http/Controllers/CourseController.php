@@ -37,12 +37,17 @@ class CourseController extends Controller
     {
         //
         $request->validate([
-            'name' => 'required|unique:courses,name',
-            'code' => 'required|unique:courses,code',
+            'name' => 'required|string|max:255',
+            'syllabus' => 'required|string',
+            'duration' => 'required|string|max:50',
         ]);
-        $input = $request->all();
-        Course::create($input);
-        return redirect('courses')->with('flash_message','Course Added!');
+        Course::create([
+            'name' => $request->input('name'),
+            'syllabus' => $request->input('syllabus'),
+            'duration' => $request->input('duration'),
+        ]);
+       
+        return redirect()->route('courses.index')->with('flash_message', 'Course Added!');
     }
 
     /**
