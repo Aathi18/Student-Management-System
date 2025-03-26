@@ -1,36 +1,6 @@
 @extends('layout')
 
 @section('content')
-<div class="card shadow-sm border-0">
-    <div class="card-header bg-info text-white text-center">
-        <h2 class="mb-0">Edit Course</h2>
-    </div>
-    <div class="card-body">
-        <form action="{{ url('courses/' . $courses->id) }}" method="post">
-            {!! csrf_field() !!}
-            @method('PATCH')
-            <input type="hidden" name="id" id="id" value="{{ $courses->id }}">
-
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" value="{{ $courses->name }}" class="form-control">
-            </div>
-            
-            <div class="form-group">
-                <label for="syllabus">Syllabus</label>
-                <input type="text" name="syllabus" id="syllabus" value="{{ $courses->syllabus }}" class="form-control">
-            </div>
-            
-            <div class="form-group">
-                <label for="duration">Duration</label>
-                <input type="text" name="duration" id="duration" value="{{ $courses->duration }}" class="form-control">
-            </div>
-            
-            <input type="submit" value="Update" class="btn btn-primary btn-block">
-        </form>
-    </div>
-</div>
-
 
 <style>
     body {
@@ -68,4 +38,36 @@
         width: 100%;
     }
 </style>
+<div class="card shadow-sm border-0">
+    <div class="card-header bg-info text-white text-center">
+        <h2 class="mb-0">Edit Course</h2>
+    </div>
+    <div class="card-body">
+        <form action="{{ url('courses/' . $courses->id) }}" method="post">
+            {!! csrf_field() !!}
+            @method('PATCH')
+            <input type="hidden" name="id" id="id" value="{{ $courses->id }}">
+
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" value="{{ $courses->name }}" class="form-control">
+            </div>
+            
+            <div class="form-group">
+                <label for="syllabus">Syllabus</label>
+                <input type="text" name="syllabus" id="syllabus" value="{{ $courses->syllabus }}" class="form-control">
+            </div>
+            
+            <div class="form-group">
+                <label for="duration">Duration</label>
+                <input type="text" name="duration" id="duration" value="{{ $courses->duration }}" class="form-control">
+            </div>
+            
+            <input type="submit" value="Update" class="btn btn-primary btn-block">
+        </form>
+    </div>
+</div>
+
+
+
 @endsection

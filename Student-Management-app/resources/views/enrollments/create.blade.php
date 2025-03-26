@@ -3,8 +3,10 @@
 
 <style>
     body {
-        background-color: #f7f9fc;
-        font-family: 'Arial', sans-serif;
+        background-image: url("{{ asset('3.jpg') }}");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
     }
     .card {
         border-radius: 12px;

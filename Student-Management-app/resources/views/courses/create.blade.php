@@ -1,34 +1,13 @@
 @extends('layout')
 
 @section('content')
-<div class="card shadow-sm border-0">
-    <div class="card-header bg-info text-white text-center">
-        <h2 class="mb-0">Course Page</h2>
-    </div>
-    <div class="card-body">
-        <form action="{{url('courses')}}" method="post">
-            {!! csrf_field() !!}
-            <div class="form-group">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" name="name" id="name" class="form-control" placeholder="Enter Course Name" style="font-family: 'Lora', serif;">
-            </div>
-            <div class="form-group">
-                <label for="syllabus" class="form-label">Syllabus</label>
-                <input type="text" name="syllabus" id="syllabus" class="form-control" placeholder="Enter Syllabus" style="font-family: 'Lora', serif;">
-            </div>
-            <div class="form-group">
-                <label for="duration" class="form-label">Duration</label>
-                <input type="text" name="duration" id="duration" class="form-control" placeholder="Enter the Duration" style="font-family: 'Lora', serif;">
-            </div>
-            <input type="submit" value="Save" class="btn btn-success btn-block">
-        </form>
-    </div>
-</div>
 
 <style>
     body {
-        background-color: #f7f9fc;
-        font-family: 'Arial', sans-serif;
+        background-image: url("{{ asset('3.jpg') }}");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
     }
     .card {
         border-radius: 15px;
@@ -69,4 +48,30 @@
         border-color: #1e7e34;
     }
 </style>
+
+<div class="card shadow-sm border-0">
+    <div class="card-header bg-info text-white text-center">
+        <h2 class="mb-0">Course Page</h2>
+    </div>
+    <div class="card-body">
+        <form action="{{url('courses')}}" method="post">
+            {!! csrf_field() !!}
+            <div class="form-group">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Enter Course Name" style="font-family: 'Lora', serif;">
+            </div>
+            <div class="form-group">
+                <label for="syllabus" class="form-label">Syllabus</label>
+                <input type="text" name="syllabus" id="syllabus" class="form-control" placeholder="Enter Syllabus" style="font-family: 'Lora', serif;">
+            </div>
+            <div class="form-group">
+                <label for="duration" class="form-label">Duration</label>
+                <input type="text" name="duration" id="duration" class="form-control" placeholder="Enter the Duration" style="font-family: 'Lora', serif;">
+            </div>
+            <input type="submit" value="Save" class="btn btn-success btn-block">
+        </form>
+    </div>
+</div>
+
+
 @endsection

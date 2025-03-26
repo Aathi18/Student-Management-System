@@ -1,24 +1,5 @@
 @extends('layout')
 @section('content')
-<div class="card shadow-sm border-0">
-    <div class="card-header bg-info text-white text-center">
-        <h3 class="mb-0">Student Details</h3>
-    </div>
-    <div class="card-body">
-        <div class="card-body">
-            <h5 class="card-title text-primary font-weight-bold" style="font-family: 'Lora', serif;">
-                <i class="fa fa-user"></i> Name: <span class="text-dark">{{$students->name}}</span>
-            </h5>
-            <p class="card-text" style="font-family: 'Lora', serif;">
-                <i class="fa fa-map-marker"></i> <strong>Address:</strong> <span>{{$students->address}}</span>
-            </p>
-            <p class="card-text" style="font-family: 'Lora', serif;">
-                <i class="fa fa-phone"></i> <strong>Mobile:</strong> <span >{{$students->mobile}}</span>
-            </p>
-        </div>
-    </div>
-    <hr />
-</div>
 
 <style>
     body {
@@ -63,4 +44,26 @@
     }
     
 </style>
+
+<div class="card shadow-sm border-0">
+    <div class="card-header bg-info text-white text-center">
+        <h3 class="mb-0">Student Details</h3>
+    </div>
+    <div class="card-body">
+        <div class="card-body">
+            <h5 class="card-title text-primary font-weight-bold" style="font-family: 'Lora', serif;">
+                <i class="fa fa-user"></i> Name: <span class="text-dark">{{$students->name}}</span>
+            </h5>
+            <p class="card-text" style="font-family: 'Lora', serif;">
+                <i class="fa fa-map-marker"></i> <strong>Address:</strong> <span>{{$students->address}}</span>
+            </p>
+            <p class="card-text" style="font-family: 'Lora', serif;">
+                <i class="fa fa-phone"></i> <strong>Mobile:</strong> <span >{{$students->mobile}}</span>
+            </p>
+        </div>
+    </div>
+    <hr />
+</div>
+
+
 @endsection

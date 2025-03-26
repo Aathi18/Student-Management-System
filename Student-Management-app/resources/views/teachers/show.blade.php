@@ -1,24 +1,5 @@
 @extends('layout')
 @section('content')
-<div class="card shadow-sm border-0">
-    <div class="card-header bg-info text-white text-center">
-        <h3 class="mb-0">Teacher Details</h3>
-    </div>
-    
-        <div class="card-body">
-            <h5 class="card-title text-primary" style="font-family: 'Lora', serif;">
-                Name: <span class="text-dark">{{ $teachers->name }}</span>
-            </h5>
-            <p class="card-text" style="font-family: 'Lora', serif;">
-                <strong>Address:</strong> <span class="text-muted">{{ $teachers->address }}</span>
-            </p>
-            <p class="card-text" style="font-family: 'Lora', serif;">
-                <strong>Mobile:</strong> <span class="text-success">{{ $teachers->mobile }}</span>
-            </p>
-        </div>
-        <hr />
-    </div>
-
 
 <style>
     body {
@@ -62,4 +43,25 @@
         margin-top: 20px;
     }
 </style>
+<div class="card shadow-sm border-0">
+    <div class="card-header bg-info text-white text-center">
+        <h3 class="mb-0">Teacher Details</h3>
+    </div>
+    
+        <div class="card-body">
+            <h5 class="card-title text-primary" style="font-family: 'Lora', serif;">
+                Name: <span class="text-dark">{{ $teachers->name }}</span>
+            </h5>
+            <p class="card-text" style="font-family: 'Lora', serif;">
+                <strong>Address:</strong> <span class="text-muted">{{ $teachers->address }}</span>
+            </p>
+            <p class="card-text" style="font-family: 'Lora', serif;">
+                <strong>Mobile:</strong> <span class="text-success">{{ $teachers->mobile }}</span>
+            </p>
+        </div>
+        <hr />
+    </div>
+
+
+
 @endsection

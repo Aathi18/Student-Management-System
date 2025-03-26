@@ -1,40 +1,12 @@
 @extends('layout')
 @section('content')
 
-<div class="card">
-    <div class="card-header">Batches</div>
-    <div class="card-body">
-        <form action="{{url('batches')}}" method="post">
-            {!! csrf_field() !!}
-            
-            <div class="form-group">
-                <label for="name">Batch Name</label>
-                <input type="text" name="name" id="name" class="form-control" placeholder="Enter the Batch Name" style="font-family: 'Lora', serif;">
-            </div>
-            
-            <div class="form-group">
-                <label for="course_id">Course Name</label>
-                <select name="course_id" id="course_id" class="form-control" style="font-family: 'Lora', serif;">
-                    @foreach($courses as $id => $name)
-                        <option value="{{ $id }}">{{ $name }}</option>
-                    @endforeach
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="start_date">Start Date</label>
-                <input type="text" name="start_date" id="start_date" class="form-control" placeholder="Enter the Start date" style="font-family: 'Lora', serif;">
-            </div>
-            
-            <input type="submit" value="Save" class="btn btn-success">
-        </form>
-    </div>
-</div>
-
 <style>
     body {
-        background-color: #f0f2f5;
-        font-family: 'Arial', sans-serif;
+        background-image: url("{{ asset('3.jpg') }}");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
     }
     .card {
         border-radius: 12px;
@@ -82,6 +54,38 @@
         border-color: #1e7e34;
     }
 </style>
+
+<div class="card">
+    <div class="card-header">Batches</div>
+    <div class="card-body">
+        <form action="{{url('batches')}}" method="post">
+            {!! csrf_field() !!}
+            
+            <div class="form-group">
+                <label for="name">Batch Name</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Enter the Batch Name" style="font-family: 'Lora', serif;">
+            </div>
+            
+            <div class="form-group">
+                <label for="course_id">Course Name</label>
+                <select name="course_id" id="course_id" class="form-control" style="font-family: 'Lora', serif;">
+                    @foreach($courses as $id => $name)
+                        <option value="{{ $id }}">{{ $name }}</option>
+                    @endforeach
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="start_date">Start Date</label>
+                <input type="text" name="start_date" id="start_date" class="form-control" placeholder="Enter the Start date" style="font-family: 'Lora', serif;">
+            </div>
+            
+            <input type="submit" value="Save" class="btn btn-success">
+        </form>
+    </div>
+</div>
+
+
 
 
 @stop

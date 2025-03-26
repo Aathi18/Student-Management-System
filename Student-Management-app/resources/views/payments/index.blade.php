@@ -113,7 +113,7 @@
                     @foreach($payments as $item)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $item->enrollment->enroll_no }}</td>
+                            <td>{{ $item->enrollment ? $item->enrollment->enroll_no : 'N/A' }}</td>
                             <td>{{ $item->paid_date }}</td>
                             <td>{{ $item->amount }}</td>
                             <td>

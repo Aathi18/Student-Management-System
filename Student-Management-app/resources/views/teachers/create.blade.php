@@ -1,34 +1,12 @@
 @extends('layout')
 @section('content')
 
-<div class="card shadow-sm border-0">
-    <div class="card-header bg-info text-white text-center">
-        <h3 class="mb-0">Teacher Page</h3>
-    </div>
-    <div class="card-body">
-        <form action="{{ url('teachers') }}" method="post">
-            {!! csrf_field() !!}
-            <div class="form-group">
-                <label for="name" class="font-weight-bold" style="font-family: 'Roboto', sans-serif;">Name</label><br>
-                <input type="text" name="name" id="name" class="form-control" style="font-family: 'Roboto', serif;" placeholder="Enter the Name"><br>
-            </div>
-            <div class="form-group">
-                <label for="address" class="font-weight-bold" style="font-family: 'Lora', serif;">Address</label><br>
-                <input type="text" name="address" id="address" class="form-control" style="font-family: 'Lora', serif;" placeholder="Enter the Address"><br>
-            </div>
-            <div class="form-group">
-                <label for="mobile" class="font-weight-bold" style="font-family: 'Open Sans', sans-serif;">Mobile</label><br>
-                <input type="text" name="mobile" id="mobile" class="form-control" style="font-family: 'Open Sans', serif;" placeholder="Enter the  Mobile Number"><br>
-            </div>
-            <input type="submit" value="Save" class="btn btn-success btn-block"><br>
-        </form>
-    </div>
-</div>
-
 <style>
     body {
-        background-color: #f0f2f5;
-        font-family: 'Arial', sans-serif;
+        background-image: url("{{ asset('3.jpg') }}");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
     }
     .card {
         border-radius: 12px;
@@ -56,5 +34,31 @@
         width: 100%;
     }
 </style>
+
+<div class="card shadow-sm border-0">
+    <div class="card-header bg-info text-white text-center">
+        <h3 class="mb-0">Teacher Page</h3>
+    </div>
+    <div class="card-body">
+        <form action="{{ url('teachers') }}" method="post">
+            {!! csrf_field() !!}
+            <div class="form-group">
+                <label for="name" class="font-weight-bold" style="font-family: 'Roboto', sans-serif;">Name</label><br>
+                <input type="text" name="name" id="name" class="form-control" style="font-family: 'Roboto', serif;" placeholder="Enter the Name"><br>
+            </div>
+            <div class="form-group">
+                <label for="address" class="font-weight-bold" style="font-family: 'Lora', serif;">Address</label><br>
+                <input type="text" name="address" id="address" class="form-control" style="font-family: 'Lora', serif;" placeholder="Enter the Address"><br>
+            </div>
+            <div class="form-group">
+                <label for="mobile" class="font-weight-bold" style="font-family: 'Open Sans', sans-serif;">Mobile</label><br>
+                <input type="text" name="mobile" id="mobile" class="form-control" style="font-family: 'Open Sans', serif;" placeholder="Enter the  Mobile Number"><br>
+            </div>
+            <input type="submit" value="Save" class="btn btn-success btn-block"><br>
+        </form>
+    </div>
+</div>
+
+
 
 @endsection

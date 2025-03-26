@@ -1,6 +1,41 @@
 @extends('layout')
 @section('content')
 
+<style>
+    body {
+        
+        background-image: url("{{ asset('3.jpg') }}");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    .card {
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+    .card-header {
+        background-color: #007bff;
+        border-bottom: 2px solid #0056b3;
+        text-align: center;
+        font-size: 1.25rem;
+        font-family: 'Georgia', serif;
+    }
+    .form-control {
+        border-radius: 5px;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    .btn-block {
+        background-color: #28a745;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn-block:hover {
+        background-color: #218838;
+    }
+</style>
+
+
 <div class="card shadow-sm border-0">
     <div class="card-header bg-info text-white text-center">
         <h4 class="mb-0">Student Page</h4>
@@ -31,36 +66,6 @@
     </div>
 </div>
 
-<style>
-    body {
-        
-        background-image: url('3.jpg');
-        background-attachment: fixed;
-    }
-    .card {
-        border-radius: 10px;
-        margin-top: 20px;
-    }
-    .card-header {
-        background-color: #007bff;
-        border-bottom: 2px solid #0056b3;
-        text-align: center;
-        font-size: 1.25rem;
-        font-family: 'Georgia', serif;
-    }
-    .form-control {
-        border-radius: 5px;
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-    }
-    .btn-block {
-        background-color: #28a745;
-        border: none;
-        border-radius: 5px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    .btn-block:hover {
-        background-color: #218838;
-    }
-</style>
+
 
 @stop
